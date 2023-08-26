@@ -54,9 +54,7 @@ export default function FeedCard(props: FeedCardInterface) {
               fullName={props.item.author.fullName}
               avatarUrl={props.item.author.avatarUrl}
             ></UserProfile>
-            <div
-              style={{ display: "flex", flexDirection: "row" }}
-            >
+            <div style={{ display: "flex", flexDirection: "row" }}>
               {props.item.eventType == "incident" ? (
                 <Button flat auto rounded color="warning">
                   <Text
@@ -99,48 +97,48 @@ export default function FeedCard(props: FeedCardInterface) {
         <Card.Divider />
         <Card.Body css={{ py: "$10" }}>
           <Container>
-              <Text h3 b>
-                {props.item.title}
-              </Text>
-              {props.item.address != null ? (
-                <Row align="center">
-                  <MdLocationOn />
-                  <Spacer x={0.35} />
-                  <Text b>{props.item.address.streetAddress}</Text>
+            <Text h3 b>
+              {props.item.title}
+            </Text>
+            {props.item.address != null ? (
+              <Row align="center">
+                <MdLocationOn />
+                <Spacer x={0.35} />
+                <Text b>{props.item.address.streetAddress}</Text>
+              </Row>
+            ) : (
+              <></>
+            )}
+            {props.item.eventTime != null ? (
+              <Row align="center">
+                <MdCalendarToday />
+                <Spacer x={0.35} />
+                <Text>{convertDate(props.item.eventTime)}</Text>
+              </Row>
+            ) : (
+              <></>
+            )}
+            <Container gap={0}>
+              {props.item.imageUrl ? (
+                <Row gap={0}>
+                  <Col>
+                    <Image
+                      objectFit="cover"
+                      css={{ borderRadius: "15px" }}
+                      src={props.item.imageUrl}
+                      alt="Default Image"
+                    />
+                  </Col>
+                  <Spacer y={1} />
+                  <Col>
+                    <Text>{props.item.description}</Text>
+                  </Col>
                 </Row>
               ) : (
-                <></>
+                <Text>{props.item.description}</Text>
               )}
-              {props.item.eventTime != null ? (
-                <Row align="center">
-                  <MdCalendarToday />
-                  <Spacer x={0.35} />
-                  <Text>{convertDate(props.item.eventTime)}</Text>
-                </Row>
-              ) : (
-                <></>
-              )}
-              <Container gap={0}>
-                {props.item.imageUrl ? (
-                  <Row gap={0}>
-                    <Col>
-                      <Image
-                        objectFit="cover"
-                        css={{ borderRadius: "15px" }}
-                        src={props.item.imageUrl}
-                        alt="Default Image"
-                      />
-                    </Col>
-                    <Spacer y={1} />
-                    <Col>
-                      <Text>{props.item.description}</Text>
-                    </Col>
-                  </Row>
-                ) : (
-                  <Text>{props.item.description}</Text>
-                )}
-              </Container>
-              <Spacer y={0.4} />
+            </Container>
+            <Spacer y={0.4} />
           </Container>
         </Card.Body>
         <Card.Divider />
