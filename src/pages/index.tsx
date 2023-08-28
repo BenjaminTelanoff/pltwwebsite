@@ -46,7 +46,7 @@ export default function Home() {
                 <Text>-Automation</Text>
               </Card.Body>
             </Card>
-            <Spacer x={2} />
+            <Spacer x={4} />
             <Card css={{ height: "190px", mw: "290px" }}>
               <Card.Body>
                 <Text>In my free time I enjoy</Text>
