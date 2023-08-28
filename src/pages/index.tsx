@@ -1,31 +1,16 @@
 import Head from "next/head";
 import MainNavbar from "@/components/MainNavbar";
-import { Container, Row, Text, Spacer } from "@nextui-org/react";
+import { Container, Card, Row, Text, Spacer } from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import { useCollection } from "@nandorojo/swr-firestore";
 import FeedItem from "@/types/FeedItem";
 
 export default function Home() {
-  const {
-    data: feedList,
-    loading,
-    error: feedListError,
-    add,
-    mutate
-  } = useCollection<FeedItem>(
-    "feed",
-    {
-      orderBy: ["creationDate", "desc"],
-      listen: true,
-
-    }
-  );
   const imageSize = 150;
   return (
     <>
       <Head>
         <title>Home | NeighborNet</title>
-        <meta name="description" content="Our neighborhood social web app is the ultimate solution to keep you informed, involved, and safe in your community by keeping you informed on events and incidents." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -36,20 +21,43 @@ export default function Home() {
             <Image
               width={imageSize}
               height={imageSize}
-              src="logo.svg"
-              alt="Main Logo"
+              src="fYIB37N3_400x400.svg"
+              alt="PLTW Logo"
             />
             <Row justify="center">
-              <Text h1>Welcome to NeighborNet</Text>
+              <Text h1>Welcome to my PLTW website</Text>
             </Row>
             <Row justify="center" align="center">
               <Text size="$xl">
                 {
-                  " Introducing our neighborhood social web app, the ultimate solution for keeping you in the loop on all the latest happenings in your local community. Our web app is the perfect tool for discovering new and exciting events taking place in your neighborhood, from parties and fundraisers to volunteer opportunities and community gatherings. We will keep you up to date on everything that is going on, so you never miss out on an opportunity to connect with your neighbors and make new friends. But that is not all, our web app also provides real-time updates on incidents and safety alerts in your area, so you can stay informed and stay safe. Use our web app today and start exploring all the exciting things happening in your community!"
+                  " My name is Benjamin Telanoff, and I am currently a senior at Santa Monica High School(SAMOHI). Having been an active participant in the PLTW program since my freshman year, I’m thrilled to continue this journey this year with the PLTW capstone program. This program is centered around providing technical solutions to real life problems. With this opportunity, I’m hoping to discover a transformative solution to a problem we encounter, that not only propels me and my peers towards revolutionary thinking, but also aligns with my aspiration to advance technology and enhance the quality of living for many."
                 }
               </Text>
             </Row>
+            <Spacer />
           </Container>
+          <Row justify="center">
+            <Card css={{ height: "190px", mw: "200px" }}>
+              <Card.Body>
+                <Text>{"My interests in engineering:"}</Text>
+                <Text>-Innovation and Design</Text>
+                <Text>-Problem Solving</Text>
+                <Text>-Data Analysis</Text>
+                <Text>-Automation</Text>
+              </Card.Body>
+            </Card>
+            <Spacer x={2} />
+            <Card css={{ height: "190px", mw: "290px" }}>
+              <Card.Body>
+                <Text>In my free time I enjoy</Text>
+                <Text>Coding</Text>
+                <Text>Writing</Text>
+                <Text>Playing games/spending time with friends</Text>
+                <Text>Excercising</Text>
+              </Card.Body>
+            </Card>
+          </Row>
+          <Spacer />
         </div>
       </main>
     </>

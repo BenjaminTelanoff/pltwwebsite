@@ -7,7 +7,7 @@ export default function MainLogo(props: MainLogoProps) {
     <Image
       width={props.size}
       height={props.size}
-      src="logo.svg"
+      src="fYIB37N3_400x400.svg"
       alt="Main Logo"
     />
   );
