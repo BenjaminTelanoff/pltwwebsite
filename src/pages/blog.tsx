@@ -1,3 +1,4 @@
+import Contact from "@/components/contact";
 import {
   Card,
   Container,
@@ -259,6 +260,7 @@ export default function About() {
           </Card>
         </Row>
       </Container>
+      <Contact />
     </div>
   );
 }

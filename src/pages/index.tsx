@@ -3,6 +3,7 @@ import MainNavbar from "@/components/MainNavbar";
 import { Container, Card, Row, Text, Spacer } from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import { useCollection } from "@nandorojo/swr-firestore";
+import Contact from "@/components/contact";
 import FeedItem from "@/types/FeedItem";
 
 export default function Home() {
@@ -10,9 +11,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | NeighborNet</title>
+        <title>Home | PLTW</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fYIB37N3_400x400.ico" />
       </Head>
       <main>
         <div>
@@ -57,7 +58,7 @@ export default function Home() {
               </Card.Body>
             </Card>
           </Row>
-          <Spacer />
+          <Contact />
         </div>
       </main>
     </>
