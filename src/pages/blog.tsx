@@ -22,7 +22,7 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>Economy | Arpanet</title>
+        <title>Blog | Arpanet</title>
       </Head>
       <Container>
         <Grid.Container></Grid.Container>
