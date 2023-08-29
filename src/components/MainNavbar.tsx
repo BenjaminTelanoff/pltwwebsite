@@ -43,8 +43,8 @@ export default function MainNavbar() {
       </Navbar.Brand>
       <Navbar.Content activeColor="secondary" hideIn="xs" variant="underline">
         <Spacer x={-38.5} />
-        <Link href={"/Resources"} passHref legacyBehavior>
-          <Navbar.Link isActive={router.pathname == "/Resources"}>
+        <Link href={"/resources"} passHref legacyBehavior>
+          <Navbar.Link isActive={router.pathname == "/resources"}>
             Resources
           </Navbar.Link>
         </Link>
@@ -122,8 +122,8 @@ export default function MainNavbar() {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <Link href={"/Blog"} passHref legacyBehavior>
-          <Navbar.Link isActive={router.pathname == "/Blog"}>Blog</Navbar.Link>
+        <Link href={"/blog"} passHref legacyBehavior>
+          <Navbar.Link isActive={router.pathname == "/blog"}>Blog</Navbar.Link>
         </Link>
       </Navbar.Content>
     </Navbar>
