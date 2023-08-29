@@ -1,4 +1,3 @@
-import Contact from "@/components/contact";
 import {
   Card,
   Container,
@@ -15,252 +14,313 @@ import {
 import Head from "next/head";
 import React from "react";
 export default function About() {
+  const CardItemImage = ({
+    header,
+    imgURL,
+    setVis,
+  }: {
+    header: string;
+    imgURL: string;
+    setVis: any;
+  }) => {
+    return (
+      <>
+        <Head>
+          <title>Spread of Info | Arpanet</title>
+        </Head>
+        <Card css={{ mw: "330px", h: "auto" }} variant="bordered">
+          <Card.Header>
+            <Text b>{header}</Text>
+          </Card.Header>
+          <Card.Divider />
+          <Card.Body css={{ py: "$10" }}>
+            <Image width={200} height={200} src={imgURL} />
+          </Card.Body>
+          <Card.Divider />
+          <Card.Footer>
+            <Row justify="center" align="center">
+              <Button size="sm" light onPress={() => setVis(true)}>
+                Expand
+              </Button>
+            </Row>
+          </Card.Footer>
+        </Card>
+      </>
+    );
+  };
+  const CardItemText = ({
+    header,
+    text,
+    setVis,
+  }: {
+    header: string;
+    text: string;
+    setVis: any;
+  }) => {
+    return (
+      <Card css={{ mw: "330px", h: "auto" }} variant="bordered">
+        <Card.Header css={{ height: "50px" }}>
+          <Text b>{header}</Text>
+        </Card.Header>
+        <Card.Divider />
+        <Card.Body css={{ height: "250px" }}>
+          <Text>{text}</Text>
+        </Card.Body>
+        <Card.Divider />
+        <Card.Footer>
+          <Row justify="center" align="center">
+            <Button size="sm" light onPress={() => setVis(true)}>
+              Expand
+            </Button>
+          </Row>
+        </Card.Footer>
+      </Card>
+    );
+  };
   const { setVisible, bindings } = useModal();
   const { setVisible: setVisible2, bindings: bindings2 } = useModal();
   const { setVisible: setVisible3, bindings: bindings3 } = useModal();
   const { setVisible: setVisible4, bindings: bindings4 } = useModal();
+  const { setVisible: setVisible5, bindings: bindings5 } = useModal();
+
   return (
     <div>
-      <Head>
-        <title>Blog | Arpanet</title>
-      </Head>
       <Container>
-        <Grid.Container></Grid.Container>
         <Row justify="center" align="center">
-          <Text color="#85bb65" h1>
-            Economy
-          </Text>
+          <Text h1>Spread of Information</Text>
         </Row>
+        <Spacer />
         <Text>
-          The early internet, ARPANET, had a significant effect on the economy.
-          ARPANET established the framework for an international network that
-          transformed information sharing and business procedures by
-          facilitating data transfer and communication between computers. The
-          ability to quickly and effectively transmit data helped businesses to
-          increase their client base and operational efficiency, which in turn
-          enabled the growth of electronic commerce. ARPANET had created a
-          platform in which new companies and technology allowed for innovation
-          and entrepreneurship. The ARPANET has a positive economic impact on
-          industry, services, and finance. This is because it increased
-          productivity, decreased prices for transactions, and provided a
-          market. In the end, the economic revolution brought about by the
-          ARPANET paved the path for the digital age and still has an impact on
-          our current networked society.
+          The method that data was shared and disseminated was revolutionized by
+          ARPANET, which had a significant impact on how quickly information
+          spread. It introduced a decentralized network architecture that made
+          it possible to transmit information quickly and effectively across
+          very long distances. As it can instantaneously access data, it was
+          seen as a development in communication technology. Now, the prior
+          issues of space and time were solved for the transmission of
+          information. And by providing a platform for people, groups, and
+          institutions to easily share knowledge, cooperate, and access
+          resources, ARPANET lay the groundwork for the Internet. It enabled the
+          quick distribution of ideas, news, and research by creating a global
+          network that linked people from many locations and backgrounds. It is
+          impossible to exaggerate the significance of ARPANET for the
+          dissemination of information because it sparked a paradigm change in
+          communication and paved the way for the information age we live in
+          today.
         </Text>
-        <Spacer y={1} />
+        <Spacer />
         <Row justify="center" align="center">
-          <Card css={{ mw: "330px" }} variant="bordered">
-            <Card.Header>
-              <Text b>Evolution of Ecommerce Industry</Text>
-            </Card.Header>
-            <Card.Divider />
-            <Card.Body css={{ height: "250px", py: "$10" }}>
-              <Image
-                width={200}
-                height={200}
-                src="https://www.agileinfoways.com/wp-content/uploads/2018/02/The-Evolution-of-E-Commerce-Industry-in-the-Last-few-Years.jpg"
+          <Grid.Container gap={2} justify="center" alignContent="center">
+            <Grid>
+              <CardItemImage
+                header={"Geographic Map"}
+                imgURL={
+                  "http://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/7032016/ARPANET.jpg?1477749691"
+                }
+                setVis={setVisible}
               />
-            </Card.Body>
-            <Card.Divider />
-            <Card.Footer>
-              <Row justify="center" align="center">
-                <Button size="sm" light onPress={() => setVisible(true)}>
-                  Expand
-                </Button>
-                <Modal
-                  scroll
-                  width="600px"
-                  aria-labelledby="modal-title"
-                  aria-describedby="modal-description"
-                  {...bindings}
-                >
-                  <Modal.Header>
-                    <Text id="modal-title" size={18}>
-                      THE EVOLUTION OF E-COMMERCE INDUSTRY IN THE LAST FEW
-                      YEARS(2018)
-                    </Text>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Image
-                      width={400}
-                      height={300}
-                      src="https://www.agileinfoways.com/wp-content/uploads/2018/02/The-Evolution-of-E-Commerce-Industry-in-the-Last-few-Years.jpg"
-                    />
-                    <Text id="modal-description">
-                      This image exemplifies the enduring impact that ARPANET
-                      had on the economy. It had a pivotal role in the creation
-                      of e-commerce not only since it aided in the creation of
-                      the internet, but by being able to expand and reach new
-                      markets, revolutionize consumer behavior, and drive
-                      significant economic transactions through online
-                      platforms, turning the traditional economy into a digital
-                      marketplace.
-                    </Text>
-                  </Modal.Body>
-                </Modal>
-              </Row>
-            </Card.Footer>
-          </Card>
-          <Spacer x={2} />
-          <Card css={{ mw: "330px" }} variant="bordered">
-            <Card.Header>
-              <Text b>INTERNET ECONOMY GDP</Text>
-            </Card.Header>
-            <Card.Divider />
-            <Card.Body css={{ height: "250px", py: "$10" }}>
-              <Image
-                width={10000}
-                height={200}
-                src="http://img.koreatimes.co.kr/upload/news/120325_a02_statwatch.jpg"
+            </Grid>
+            <Grid>
+              <CardItemImage
+                header={"GEOGRAPHIC MAP"}
+                imgURL={
+                  "https://thisdayintechhistory.com/wp-content/uploads/2012/11/arpanet80.gif"
+                }
+                setVis={setVisible2}
               />
-            </Card.Body>
-            <Card.Divider />
-            <Card.Footer>
-              <Row justify="center" align="center">
-                <Button size="sm" light onPress={() => setVisible2(true)}>
-                  Expand
-                </Button>
-                <Modal
-                  scroll
-                  width="600px"
-                  aria-labelledby="n"
-                  aria-describedby="d"
-                  {...bindings2}
-                >
-                  <Modal.Header>
-                    <Text id="n" size={18}>
-                      INTERNET ECONOMY AS A PERCENTAGE OF 2016 GDP(2012). OECD
-                    </Text>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Image
-                      width={400}
-                      height={300}
-                      src="http://img.koreatimes.co.kr/upload/news/120325_a02_statwatch.jpg"
-                    />
-                    <Text id="d">
-                      This image signifies how the development and widespread
-                      adoption of the internet, stemming from ARPANET's
-                      innovation, have transformed various sectors, fostering
-                      economic growth, innovation, and new business
-                      opportunities, contributing to the overall GDP of
-                      countries worldwide.
-                    </Text>
-                  </Modal.Body>
-                </Modal>
-              </Row>
-            </Card.Footer>
-          </Card>
-          <Spacer x={2} />
-          <Card css={{ mw: "330px" }} variant="bordered">
-            <Card.Header>
-              <Text b>ARPANET MANAGEMENT STUDY</Text>
-            </Card.Header>
-            <Card.Divider />
-            <Card.Body css={{ height: "250px", py: "$10" }}>
-              <Text>
-                "We recommend that the commercial packet switching industry be
-                encouraged to provide the additional capacity that ARPA and new
-                governmental applications will be seeking from this present
-                ARPANET, rather than permit an open-ended expansion of the
-                ARPANET communications network.”{" "}
-              </Text>
-            </Card.Body>
-            <Card.Divider />
-            <Card.Footer>
-              <Row justify="center" align="center">
-                <Button size="sm" light onPress={() => setVisible3(true)}>
-                  Expand
-                </Button>
-                <Modal
-                  scroll
-                  width="600px"
-                  aria-labelledby="modal-title"
-                  aria-describedby="modal-description"
-                  {...bindings3}
-                >
-                  <Modal.Header>
-                    <Text id="modal-title" size={18}>
-                      Baran, Paul.(1974) Arpanet Management Study
-                    </Text>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Text>
-                      "We recommend that the commercial packet switching
-                      industry be encouraged to provide the additional capacity
-                      that ARPA and new governmental applications will be
-                      seeking from this present ARPANET, rather than permit an
-                      open-ended expansion of the ARPANET communications
-                      network.”
-                    </Text>
-                    <Text id="modal-description">
-                      Even in the earlier stages of ARPANET, Baran was already
-                      envisioning a wide-scale use of packet switching
-                      technology inluding its use in the commercial sector. This
-                      demonstrates the economical potential perceived and shows
-                      why this technology had introduced the idea of e-commerce.
-                    </Text>
-                  </Modal.Body>
-                </Modal>
-              </Row>
-            </Card.Footer>
-          </Card>
-          <Spacer x={2} />
-          <Card css={{ mw: "330px" }} variant="bordered">
-            <Card.Header>
-              <Text b>
-                The Arpanet and Its Impact on the State of Networking
-              </Text>
-            </Card.Header>
-            <Card.Divider />
-            <Card.Body css={{ height: "228px", py: "$10" }}>
-              <Text>
-                "I like to argue that the Arpanet was the first of the shared
-                economy systems, a system similar to Airbnb and Uber that used
-                resources that were otherwise idle.”
-              </Text>
-            </Card.Body>
-            <Card.Divider />
-            <Card.Footer>
-              <Row justify="center" align="center">
-                <Button size="sm" light onPress={() => setVisible4(true)}>
-                  Expand
-                </Button>
-                <Modal
-                  scroll
-                  width="600px"
-                  aria-labelledby="n"
-                  aria-describedby="d"
-                  {...bindings4}
-                >
-                  <Modal.Header>
-                    <Text id="n" size={18}>
-                      Primary - Leonard Kleinrock(2019)
-                    </Text>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Text>
-                      "I like to argue that the Arpanet was the first of the
-                      shared economy systems, a system similar to Airbnb and
-                      Uber that used resources that were otherwise idle.”
-                    </Text>
-                    <Text id="d">
-                      According to the claim, the ARPANET was a model of the
-                      shared economy before Airbnb and Uber, where unused
-                      resources were used wisely. This highlights the economic
-                      contribution of the ARPANET by pioneering the idea of
-                      resource-sharing and developing a platform for optimum
-                      resource usage, resulting in financial gains and
-                      improvements in efficiency.
-                    </Text>
-                  </Modal.Body>
-                </Modal>
-              </Row>
-            </Card.Footer>
-          </Card>
+            </Grid>
+            <Grid>
+              <CardItemText
+                header={"Growing Community"}
+                text={
+                  "“By the end of 1975, twenty-nine sites were connected to the ARPANET. This early network is now an operational resource supporting a large and growing research community in the computer science and related disciplines. -Vint Cerf and Robert Kahn”"
+                }
+                setVis={setVisible3}
+              />
+            </Grid>
+            <Grid>
+              <CardItemText
+                header={"The Arpanet and Its Impact on the State of Networking"}
+                text={
+                  "“I sit down at my desk and I try to log in, and it said, “One prior failed attempt.” I knew that it wasn’t me, but I knew we had logs that kept track. I asked the system administrator to look into it. He identified that the failed attempt came from a military research laboratory on the other side of the country. -STEVE CROCKER”"
+                }
+                setVis={setVisible4}
+              />
+
+              <Grid>
+                <CardItemText
+                  header={"Quote"}
+                  text={
+                    "In the early days of the military Arpanet, my daughter was studying in Nicaragua. Because the U.S. was essentially at war with them, contact was difficult. I managed to use MIT's Arpanet connection, and she found one, so we could communicate thanks to the Pentagon! -Noam Chomsky"
+                  }
+                  setVis={setVisible5}
+                />
+              </Grid>
+            </Grid>
+          </Grid.Container>
         </Row>
       </Container>
-      <Contact />
+
+      {/* MODAL SETUP BELOW */}
+      <Modal
+        scroll
+        width="600px"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        {...bindings5}
+      >
+        <Modal.Header>
+          <Text id="modal-title" size={18}>
+            Quote by Noam Chomsky, A-zquotes.com
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Text id="modal-description">
+            In the early days of the military Arpanet, my daughter was studying
+            in Nicaragua. Because the U.S. was essentially at war with them,
+            contact was difficult. I managed to use MIT's Arpanet connection,
+            and she found one, so we could communicate thanks to the Pentagon!
+          </Text>
+          <Spacer />
+          <Text b>
+            {" "}
+            While prior technology such as phone calls could be compromised by
+            governments listening to the line, ARPANET completely revolutionized
+            the way individuals could communicate, as it provided a secure way
+            for the spread of information. In this way ARPANET was a new
+            frontier for communication - individuals could now communicate all
+            across the world (given there was a computer on both ends) using
+            secure packets that where extremely difficult to intercept.{" "}
+          </Text>
+        </Modal.Body>
+      </Modal>
+      <Modal
+        scroll
+        width="600px"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        {...bindings}
+      >
+        <Modal.Header>
+          <Text id="modal-title" size={18}>
+            ARPA Network, Grographic Map(1973)
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Image
+            width={400}
+            height={300}
+            src="http://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/7032016/ARPANET.jpg?1477749691"
+          />
+          <Text id="modal-description">
+            From the original two university computers roughly a decage earlier,
+            ARPANET has grown masivvely, as can be seen by the sheer quantity of
+            nodes in the presented map. The 1973 map is populated with many
+            houses of academia, all wanting in on the new intercommunications
+            project. Each professor that would join the network would be able to
+            share all of their research and colloborate with other more easily
+            and safely. This is why so many professors gravitated towrds the
+            project.
+          </Text>
+        </Modal.Body>
+      </Modal>
+      <Modal
+        scroll
+        width="600px"
+        aria-labelledby="n"
+        aria-describedby="d"
+        {...bindings2}
+      >
+        <Modal.Header>
+          <Text id="n" size={18}>
+            ARPANET GEOGRAPHIC MAP(1980)
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Image
+            width={400}
+            height={300}
+            src="https://thisdayintechhistory.com/wp-content/uploads/2012/11/arpanet80.gif"
+          />
+          <Text id="d">
+            By this point, ARPANET is so popular that officials are looking at
+            commercial options. The reason the government project has had such
+            success is because of it's ability to keep over 100 servers of
+            people at the various marked locations up to date with eachother,
+            despite miles of physical distance. Even simular technology, such as
+            phones, could not service to so many individuals at once. The 1980's
+            map shows ARPANETS most busy time befofe it finally gets replaced in
+            1990 officially.
+          </Text>
+        </Modal.Body>
+      </Modal>
+      <Modal
+        scroll
+        width="600px"
+        aria-labelledby="n"
+        aria-describedby="d"
+        {...bindings3}
+      >
+        <Modal.Header>
+          <Text id="n" size={18}>
+            Growing Community
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Text>
+            “By the end of 1975, twenty-nine sites were connected to the
+            ARPANET. This early network is now an operational resource
+            supporting a large and growing research community in the computer
+            science and related disciplines.” -Vint Cerf and Robert Kahn
+          </Text>
+          <Text id="d" b>
+            The quote highlights ARPANET's pioneering role and expanding
+            capabilities in spreading information. By the end of 1975, ARPANET
+            connected twenty-nine sites, marking the early stages of a
+            groundbreaking network. It became an operational resource,
+            supporting a large and growing research community in computer
+            science and related disciplines. This demonstrates ARPANET's
+            significance in facilitating information exchange and collaboration,
+            enabling researchers to share knowledge and advance their fields.
+            ARPANET's impact on information dissemination and its role in
+            supporting the research community solidified its position as a
+            pioneering and influential network.{" "}
+          </Text>
+        </Modal.Body>
+      </Modal>
+      <Modal
+        scroll
+        width="600px"
+        aria-labelledby="n"
+        aria-describedby="d"
+        {...bindings4}
+      >
+        <Modal.Header>
+          <Text id="n" size={18}>
+            Primary - Steve Croker(2019)
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Text>
+            “I sit down at my desk and I try to log in, and it said, “One prior
+            failed attempt.” I knew that it wasn’t me, but I knew we had logs
+            that kept track. I asked the system administrator to look into it.
+            He identified that the failed attempt came from a military research
+            laboratory on the other side of the country.”
+          </Text>
+          <Text id="d">
+            This quote by Steve Croker, one of the original creators of ARPANET,
+            is the beginning to a longer interview in which he and other ARPANET
+            colleagues discuss the 'dark side' of ARPANET. Croker brings up this
+            point to illustrate that with the spread of information comes both
+            good and bad. Croker was shocked to have experienced an attack so
+            early in the phases of ARPANET, and from then on he was convinced
+            that ARPANET had the power to unite people and share their ideas in
+            both good and bad ways. This is the dark side that it brought, the
+            potential for the "spread" of evil.
+          </Text>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }
