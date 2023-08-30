@@ -79,6 +79,7 @@ export default function About() {
       </Head>
       <Container>
         <Row justify="center">
+          <Spacer />
           <CardItemText
             header={"Blog #1 - Summer expectation"}
             imgURL={
