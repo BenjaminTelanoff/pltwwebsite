@@ -43,13 +43,13 @@ export default function About() {
                 </Row>
               </Col>
             </Card.Header>
-            {/* <Card.Image
+            <Card.Image
               src="https://v1.nextui.org/images/card-example-4.jpeg"
               objectFit="cover"
               width="100%"
               height={340}
               alt="Card image background"
-            /> */}
+            />
           </Card>
         </Row>
       </Container>
