@@ -17,40 +17,6 @@ import Head from "next/head";
 import React from "react";
 import Contact from "@/components/contact";
 export default function About() {
-  const CardItemImage = ({
-    header,
-    imgURL,
-    setVis,
-  }: {
-    header: string;
-    imgURL: string;
-    setVis: any;
-  }) => {
-    return (
-      <>
-        <Head>
-          <title>Spread of Info | Arpanet</title>
-        </Head>
-        <Card css={{ mw: "330px", h: "auto" }} variant="bordered">
-          <Card.Header>
-            <Text b>{header}</Text>
-          </Card.Header>
-          <Card.Divider />
-          <Card.Body css={{ py: "$10" }}>
-            <Image width={200} height={200} src={imgURL} />
-          </Card.Body>
-          <Card.Divider />
-          <Card.Footer>
-            <Row justify="center" align="center">
-              <Button size="sm" light onPress={() => setVis(true)}>
-                Expand
-              </Button>
-            </Row>
-          </Card.Footer>
-        </Card>
-      </>
-    );
-  };
   const CardItemText = ({
     header,
     text,
@@ -72,7 +38,12 @@ export default function About() {
         <Card.Divider />
         <Card.Body css={{ height: "250px" }}>
           <Row justify="center">
-            <Image width={400} height={200} src={imgURL} />
+            <Image
+              width={400}
+              height={200}
+              src={imgURL}
+              alt="description of image"
+            />
             <Spacer x={0.5} />
             <Col>
               <Spacer y={1} />
