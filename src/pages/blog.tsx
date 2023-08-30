@@ -85,7 +85,7 @@ export default function About() {
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZHSFGA6pq9PvXptWGFfGqkrWmd2tDM5xhQ&usqp=CAU"
             }
             text={
-              "I had quite an eventful summer, but  on top of that, I'm looking to continue this time of happiness into the school year. In this blog I talk about what I did over this summer, and what I'm looking forward for, both in the engineering class and out of it."
+              "I had quite an eventful summer, but  on top of that, I'm looking to continue this time of happiness into the school year. In this blog I talk about what I did over this summer, and what I'm looking forward to, both in the engineering class and out of it."
             }
             date={"August 29th 2023"}
             setVis={setVisible}
@@ -99,6 +99,12 @@ export default function About() {
           </Text>
         </Modal.Header>
         <Modal.Body>
+          <Image
+            width={400}
+            height={200}
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZHSFGA6pq9PvXptWGFfGqkrWmd2tDM5xhQ&usqp=CAU"
+            alt="description of image"
+          />
           <Text h5>
             This summer, my family drove up to Lincoln City, Oregon for my
             uncle's wedding. There, not only did we get to attend a lovely
