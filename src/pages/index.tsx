@@ -8,6 +8,14 @@ import FeedItem from "@/types/FeedItem";
 
 export default function Home() {
   const imageSize = 150;
+  const styling = {
+    backgroundColor: "#ffffe0",
+    width: "100%",
+    height: "530px",
+    margin: 0, // Remove any default margins
+    padding: 0, // Remove any default padding
+  };
+  <Contact />;
   return (
     <>
       <Head>
@@ -16,18 +24,19 @@ export default function Home() {
         <link rel="icon" href="/fYIB37N3_400x400.ico" />
       </Head>
       <main>
-        <div>
+        <div style={styling}>
           <Container md>
-            <Spacer y={2} />
             <Image
               width={imageSize}
               height={imageSize}
               src="fYIB37N3_400x400.svg"
               alt="PLTW Logo"
             />
+            <Spacer y={-1} />
             <Row justify="center">
               <Text h1>Welcome to my PLTW website</Text>
             </Row>
+            <Spacer y={-1} />
             <Row justify="center" align="center">
               <Text size="$xl">
                 {
@@ -35,7 +44,7 @@ export default function Home() {
                 }
               </Text>
             </Row>
-            <Spacer />
+            <Spacer y={0.2} />
           </Container>
           <Row justify="center">
             <Card css={{ height: "190px", mw: "200px" }}>
@@ -58,8 +67,9 @@ export default function Home() {
               </Card.Body>
             </Card>
           </Row>
-          <Contact />
         </div>
+        <Spacer y={-0.9} />
+        <Contact />
       </main>
     </>
   );
