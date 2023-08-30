@@ -56,11 +56,13 @@ export default function About() {
     text,
     imgURL,
     setVis,
+    date,
   }: {
     header: string;
     imgURL: string;
     text: string;
     setVis: any;
+    date: string;
   }) => {
     return (
       <Card css={{ mw: "600px", h: "auto" }} variant="bordered">
@@ -80,10 +82,13 @@ export default function About() {
         </Card.Body>
         <Card.Divider />
         <Card.Footer>
-          <Row justify="center" align="center">
-            <Button size="sm" light onPress={() => setVis(true)}>
-              Expand
-            </Button>
+          <Row align="center" justify="space-between">
+            <Row>
+              <Text css={{ opacity: "0.33" }} size={"$sm"} color="">
+                {date}
+              </Text>
+            </Row>
+            <Button onPress={() => setVis(true)}>Read Entry</Button>
           </Row>
         </Card.Footer>
       </Card>
@@ -104,68 +109,57 @@ export default function About() {
       <Container>
         <Row justify="center">
           <CardItemText
-            header={"Geographic Map"}
+            header={"Blog #1 - Summer expectation"}
             imgURL={
-              "http://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/7032016/ARPANET.jpg?1477749691"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZHSFGA6pq9PvXptWGFfGqkrWmd2tDM5xhQ&usqp=CAU"
             }
             text={
-              "“By the end of 1975, twenty-nine sites were connected to the ARPANET. This early network is now an operational resource supporting a large and growing research community in the computer science and related disciplines. -Vint Cerf and Robert Kahn”"
+              "I had quite an eventful summer, but  on top of that, I'm looking to continue this time of happiness into the school year. In this blog I talk about what I did over this summer, and what I'm looking forward for, both in the engineering class and out of it."
             }
+            date={"August 29th 2023"}
             setVis={setVisible}
           />
         </Row>
       </Container>
-      <Card css={{ mw: "330px" }} variant="bordered">
-        <Card.Header>
-          <Text b>INTERNET ECONOMY GDP</Text>
-        </Card.Header>
-        <Card.Divider />
-        <Card.Body css={{ height: "250px", py: "$10" }}>
-          <Row>
-            <Image
-              width={10000}
-              height={200}
-              src="http://img.koreatimes.co.kr/upload/news/120325_a02_statwatch.jpg"
-            />
-            <Text>JUST TESTING THIS OUT FOR NOW MWAHAHAHAHAHA</Text>
-          </Row>
-        </Card.Body>
-        <Card.Divider />
-        <Card.Footer>
-          <Row justify="center" align="center">
-            <Button size="sm" light onPress={() => setVisible2(true)}>
-              Expand
-            </Button>
-            <Modal
-              scroll
-              width="600px"
-              aria-labelledby="n"
-              aria-describedby="d"
-              {...bindings2}
-            >
-              <Modal.Header>
-                <Text id="n" size={18}>
-                  INTERNET ECONOMY AS A PERCENTAGE OF 2016 GDP(2012). OECD
-                </Text>
-              </Modal.Header>
-              <Modal.Body>
-                <Image
-                  width={400}
-                  height={300}
-                  src="http://img.koreatimes.co.kr/upload/news/120325_a02_statwatch.jpg"
-                />
-                <Text id="d">
-                  This image signifies how the development and widespread
-                  adoption of the internet, stemming from ARPANET's innovation,
-                  have transformed various sectors, fostering economic growth,
-                  innovation, and new business opportunities, contributing to
-                  the overall GDP of countries worldwide.
-                </Text>
-              </Modal.Body>
-            </Modal>
-          </Row>
-        </Card.Footer>
-      </Card>
+      <Modal scroll width="800px" aria-labelledby="modal-title" {...bindings}>
+        <Modal.Header>
+          <Text id="modal-title" size={18}>
+            Blog #1
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Text h5>
+            This summer, my family drove up to Lincoln City, Oregon for my
+            uncle's wedding. There, not only did we get to attend a lovely
+            wedding with a reception at the beach, but we as well got to do some
+            sightseeing. I got to see Tillamook, a relaxing beach, an aquarium,
+            museums, and more. Another thing that I did for a lot of the summer
+            was working, averaging around 20-30 hours a week as a lifeguard with
+            the city of Santa Monica. A nice, fun, and relaxing way to gain some
+            money in my free time. It’s a very different way of living during
+            summer break than there is while school is in session. You have a
+            lot less duties and a lot more free time which creates this amazing
+            atmosphere of quite literally nothingness.
+          </Text>
+          <Text h5>
+            But that being said, school still brings about a bunch of
+            opportunities. Now that school is back in session, I’m looking
+            forward to the engineering class/program I’m participating in. The
+            numerous labs and experiments we do leading up to our competitions
+            will certainly be entertaining and fulfilling. But perhaps the
+            biggest thing I’m looking forward to is the Capstone project that we
+            will do this year, looking to create a project that will be
+            remembered.
+          </Text>
+          <Text h5>
+            Outside of engineering, I’m looking forward to having a nice
+            relaxing senior year at Samohi. Years of education have been put
+            into school and I’m now at the very end before the journey that is
+            college. After college apps and all the other stressful aspects of
+            the first semester, I’m looking forward to what is to come.
+          </Text>
+        </Modal.Body>
+      </Modal>
       <Contact />
     </div>
   );
