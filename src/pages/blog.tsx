@@ -92,19 +92,19 @@ export default function About() {
           />
         </Row>
       </Container>
-      <Modal scroll width="800px" aria-labelledby="modal-title" {...bindings}>
+      <Modal scroll width="900px" aria-labelledby="modal-title" {...bindings}>
         <Modal.Header>
           <Text id="modal-title" size={18}>
             Blog #1
           </Text>
         </Modal.Header>
+        <Image
+          width={400}
+          height={200}
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZHSFGA6pq9PvXptWGFfGqkrWmd2tDM5xhQ&usqp=CAU"
+          alt="description of image"
+        />
         <Modal.Body>
-          <Image
-            width={400}
-            height={200}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZHSFGA6pq9PvXptWGFfGqkrWmd2tDM5xhQ&usqp=CAU"
-            alt="description of image"
-          />
           <Text h5>
             This summer, my family drove up to Lincoln City, Oregon for my
             uncle's wedding. There, not only did we get to attend a lovely
