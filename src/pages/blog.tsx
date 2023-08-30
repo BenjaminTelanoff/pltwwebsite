@@ -78,8 +78,34 @@ export default function About() {
         <link rel="icon" href="/fYIB37N3_400x400.ico" />
       </Head>
       <Container>
+        <Spacer />
         <Row justify="center">
-          <Spacer />
+          <Card css={{ height: "190px", mw: "700px" }}>
+            <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+              <Col>
+                <Row justify="center">
+                  <Text h1>Welcome to my Blog</Text>
+                </Row>
+                <Row justify="center" color="white">
+                  <Text h5>
+                    Here you can learn about my life through my blog!
+                  </Text>
+                </Row>
+              </Col>
+            </Card.Header>
+            <Card.Image
+              src="data:image/jpeg;base64,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"
+              objectFit="cover"
+              width="100%"
+              height={340}
+              alt="Card image background"
+            />
+          </Card>
+        </Row>
+      </Container>
+      <Container>
+        <Spacer y={2} />
+        <Row justify="center">
           <CardItemText
             header={"Blog #1 - Summer expectation"}
             imgURL={
