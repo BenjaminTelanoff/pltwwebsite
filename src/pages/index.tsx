@@ -11,7 +11,7 @@ export default function Home() {
   const styling = {
     backgroundColor: "#ffffe0",
     width: "100%",
-    height: "530px",
+    height: "560px",
     margin: 0, // Remove any default margins
     padding: 0, // Remove any default padding
   };

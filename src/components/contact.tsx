@@ -6,15 +6,12 @@ export default function Contact() {
         <Spacer />
         <Container>
           <Row justify="center">
-            <Card css={{ height: "80px", mw: "2500px" }}>
+            <Card css={{ height: "60px", mw: "2500px" }}>
               <Row justify="center">
                 <Text>Contact Me</Text>
               </Row>
               <Row justify="center">
                 <Text>benjamin.telanoff@gmail.com</Text>
-              </Row>
-              <Row justify="center">
-                <Text>310-309-1136</Text>
               </Row>
             </Card>
           </Row>
