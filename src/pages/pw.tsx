@@ -107,7 +107,7 @@ export default function About() {
             <CardItemText
               header={"Process Writing #1"}
               text={
-                " One essay or writing process piece that you are proud of : I chose to do my research paper on US v Nixon that I did during Eng 11AP."
+                " One essay or writing process piece that you are proud of : I chose my research paper on US v Nixon that I did during Eng 11AP."
               }
               link={
                 "https://docs.google.com/document/d/1gj6_RZjaR3khltduAVC6shFBt5KcEvtp069LHFQNYqI/edit"
