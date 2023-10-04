@@ -17,16 +17,30 @@ import Head from "next/head";
 import React from "react";
 import Contact from "@/components/contact";
 export default function About() {
+  //Constants
   const styling = {
     backgroundColor: "#90EE90",
     width: "100%",
     height: "500px",
-    margin: 0, // Remove any default margins
-    padding: 0, // Remove any default padding
+    margin: 0,
+    padding: 0,
   };
+  const Resource = ({ link, text }: { link: string; text: string }) => {
+    return (
+      <Row justify="center">
+        <Link href={link}>
+          <Text h3 color="primary">
+            {text}
+          </Text>
+        </Link>
+      </Row>
+    );
+  };
+  //Main Return
   return (
     <div>
       <div style={styling}>
+        {/* What it says in webpage */}
         <Head>
           <title>Home | Resources</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,6 +52,7 @@ export default function About() {
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAACgCAMAAADpVSNoAAAAA1BMVEWQ7pBqm8gMAAAAQ0lEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvg2yIAAB+R0FCwAAAABJRU5ErkJggg=="
           alt="PLTW Logo"
         />
+        {/* Welcome Card */}
         <Container>
           <Row justify="center">
             <Card css={{ height: "190px", mw: "700px" }}>
@@ -67,8 +82,40 @@ export default function About() {
           </Row>
         </Container>
         <Spacer y={2} />
+        {/* Resources */}
         <Col>
-          <Row justify="center">
+          <Resource
+            link={
+              "https://docs.google.com/document/d/1kuX37VltEKn3wY1KqT4bQZomjwtg1iu1XS3z1h0ggFg/edit"
+            }
+            text={"PLTW Syllabus"}
+          />
+          <Resource
+            link={"https://www.samohiengineering.com/"}
+            text={"PLTW Website"}
+          />
+          <Resource
+            link={"https://www.smmusd.org/samohi"}
+            text={"Samohi Website"}
+          />
+          <Resource
+            link={"https://www.instagram.com/samohipltw/"}
+            text={"PLTW Instagram"}
+          />
+          <Resource
+            link={"https://twitter.com/samoengineering"}
+            text={"PLTW Twitter"}
+          />
+        </Col>
+        <Spacer />
+      </div>
+      <Contact />
+    </div>
+  );
+}
+
+{
+  /* <Row justify="center">
             <Link href="https://docs.google.com/document/d/1kuX37VltEKn3wY1KqT4bQZomjwtg1iu1XS3z1h0ggFg/edit">
               <Text h3 color="primary">
                 PLTW Syllabus
@@ -88,11 +135,5 @@ export default function About() {
                 Samohi Website
               </Text>
             </Link>
-          </Row>
-        </Col>
-        <Spacer />
-      </div>
-      <Contact />
-    </div>
-  );
+          </Row> */
 }
