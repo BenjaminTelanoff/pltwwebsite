@@ -114,8 +114,7 @@ export default function About() {
   );
 }
 
-{
-  /* <Row justify="center">
+/* <Row justify="center">
             <Link href="https://docs.google.com/document/d/1kuX37VltEKn3wY1KqT4bQZomjwtg1iu1XS3z1h0ggFg/edit">
               <Text h3 color="primary">
                 PLTW Syllabus
@@ -136,4 +135,3 @@ export default function About() {
               </Text>
             </Link>
           </Row> */
-}
