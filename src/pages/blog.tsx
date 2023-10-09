@@ -75,7 +75,7 @@ export default function About() {
   const styling = {
     backgroundColor: "#ADD8E6",
     width: "100%",
-    height: "1050px",
+    height: "900px",
     margin: 0, // Remove any default margins
     padding: 0, // Remove any default padding
   };
@@ -213,17 +213,38 @@ export default function About() {
           />
           <Modal.Body>
             <Text h5>
-              This summer, my family drove up to Lincoln City, Oregon for my
-              uncle's wedding. There, not only did we get to attend a lovely
-              wedding with a reception at the beach, but we as well got to do
-              some sightseeing. I got to see Tillamook, a relaxing beach, an
-              aquarium, museums, and more. Another thing that I did for a lot of
-              the summer was working, averaging around 20-30 hours a week as a
-              lifeguard with the city of Santa Monica. A nice, fun, and relaxing
-              way to gain some money in my free time. It’s a very different way
-              of living during summer break than there is while school is in
-              session. You have a lot less duties and a lot more free time which
-              creates this amazing atmosphere of quite literally nothingness.
+              For the JPL invention challenge, the goal is to get a paper ball
+              into a basket in the fastest time possible, while aligning with
+              the numerous rules and regulations that have been provided by the
+              project organizers. My group, the Sugar Gliders, consists of
+              Djibril, Riley, Jordan, Nicholas, Emma, and of course myself.
+              Being friends and having classes before with them helped our
+              dynamic so that we wouldn’t be fighting with each other, and we
+              already knew how to work off each other. Because of this, the
+              workload that we have is easily divided into multiple groups, so
+              that we could progress faster instead of all having to work
+              together on a single aspect.
+            </Text>
+            <Text h5>
+              That being said, though, there is one single factor that reduces
+              productivity quite a bit. You see, a lot of us are in some of the
+              hardest stem classes offered, Physics C E&M and multivariable.
+              Because of this we see ourselves often sidetracked, studying for
+              the test for another class or working on the homework due the next
+              day. Yes, we get the work done, but we aren’t living up to the
+              potential that we could if we devoted our time to it more
+              efficiently.
+            </Text>
+            <Text h5>
+              Outside of JPL, school is going quite well. We’ve gone past the
+              slow beginnings of the school year and have started going into
+              obscure concepts in physics, and math. It causes a heavy workload,
+              but the work is quite insightful - something to enjoy. Accompanied
+              with school, I find life going by very fast, which adds stress due
+              to college applications. I’ve finished most of my essays for UC’s,
+              the only colleges I think I’m going to apply to, but I still need
+              to revise them and add activities before I could submit the
+              application, which is due in about a month and a half.
             </Text>
           </Modal.Body>
         </Modal>
