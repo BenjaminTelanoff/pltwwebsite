@@ -58,7 +58,7 @@ export default function About() {
   const styling = {
     backgroundColor: "#ffcccb",
     width: "100%",
-    height: "100vh",
+    height: "1000px",
     margin: 0, // Remove any default margins
     padding: 0, // Remove any default padding
   };
@@ -114,52 +114,27 @@ export default function About() {
               }
             />
           </Row>
+          <Spacer />
+          <Row justify="center">
+            <CardItemText
+              header={"Process Writing #2"}
+              text={"That One Essay"}
+              link={
+                "https://docs.google.com/document/d/1gj6_RZjaR3khltduAVC6shFBt5KcEvtp069LHFQNYqI/edit"
+              }
+            />
+          </Row>
+          <Spacer />
+          <Row justify="center">
+            <CardItemText
+              header={"Process Writing #3"}
+              text={"Jpl Expository Essay"}
+              link={
+                "https://docs.google.com/document/d/1gj6_RZjaR3khltduAVC6shFBt5KcEvtp069LHFQNYqI/edit"
+              }
+            />
+          </Row>
         </Container>
-        <Modal scroll width="900px" aria-labelledby="modal-title" {...bindings}>
-          <Modal.Header>
-            <Text id="modal-title" size={18}>
-              Blog #1
-            </Text>
-          </Modal.Header>
-          <Image
-            width={400}
-            height={200}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZHSFGA6pq9PvXptWGFfGqkrWmd2tDM5xhQ&usqp=CAU"
-            alt="description of image"
-          />
-          <Modal.Body>
-            <Text h5>
-              This summer, my family drove up to Lincoln City, Oregon for my
-              uncle's wedding. There, not only did we get to attend a lovely
-              wedding with a reception at the beach, but we as well got to do
-              some sightseeing. I got to see Tillamook, a relaxing beach, an
-              aquarium, museums, and more. Another thing that I did for a lot of
-              the summer was working, averaging around 20-30 hours a week as a
-              lifeguard with the city of Santa Monica. A nice, fun, and relaxing
-              way to gain some money in my free time. It’s a very different way
-              of living during summer break than there is while school is in
-              session. You have a lot less duties and a lot more free time which
-              creates this amazing atmosphere of quite literally nothingness.
-            </Text>
-            <Text h5>
-              But that being said, school still brings about a bunch of
-              opportunities. Now that school is back in session, I’m looking
-              forward to the engineering class/program I’m participating in. The
-              numerous labs and experiments we do leading up to our competitions
-              will certainly be entertaining and fulfilling. But perhaps the
-              biggest thing I’m looking forward to is the Capstone project that
-              we will do this year, looking to create a project that will be
-              remembered.
-            </Text>
-            <Text h5>
-              Outside of engineering, I’m looking forward to having a nice
-              relaxing senior year at Samohi. Years of education have been put
-              into school and I’m now at the very end before the journey that is
-              college. After college apps and all the other stressful aspects of
-              the first semester, I’m looking forward to what is to come.
-            </Text>
-          </Modal.Body>
-        </Modal>
       </div>
       <Contact />
     </div>
