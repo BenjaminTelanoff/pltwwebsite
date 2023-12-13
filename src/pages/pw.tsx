@@ -21,10 +21,12 @@ export default function About() {
     header,
     text,
     link,
+    cardheight,
   }: {
     header: string;
     text: string;
     link: string;
+    cardheight: string;
   }) => {
     return (
       <Card css={{ mw: "600px", h: "auto" }} variant="bordered">
@@ -32,7 +34,7 @@ export default function About() {
           <Text b>{header}</Text>
         </Card.Header>
         <Card.Divider />
-        <Card.Body css={{ height: "100px" }}>
+        <Card.Body css={{ height: "{cardheight}" }}>
           <Row justify="center">
             <Text>{text}</Text>
           </Row>
@@ -58,7 +60,7 @@ export default function About() {
   const styling = {
     backgroundColor: "#ffcccb",
     width: "100%",
-    height: "1000px",
+    height: "100%+10px",
     margin: 0, // Remove any default margins
     padding: 0, // Remove any default padding
   };
@@ -110,7 +112,7 @@ export default function About() {
                 " One essay or writing process piece that you are proud of : I chose my research paper on US v Nixon that I did during Eng 11AP."
               }
               link={
-                "https://docs.google.com/document/d/1gj6_RZjaR3khltduAVC6shFBt5KcEvtp069LHFQNYqI/edit"
+                "https://docs.google.com/document/d/1gj6_RZjaR3khltduAVC6shFBt5KcEvtp069LHFQNYqI/edit?usp=sharing"
               }
             />
           </Row>
@@ -118,9 +120,11 @@ export default function About() {
           <Row justify="center">
             <CardItemText
               header={"Process Writing #2"}
-              text={"That One Essay"}
+              text={
+                "Narrative Writing - Completed Personal Statement or one of the PIQ's for the UC's. I chose to do prompt #2 of the PIQ's."
+              }
               link={
-                "https://docs.google.com/document/d/1gj6_RZjaR3khltduAVC6shFBt5KcEvtp069LHFQNYqI/edit"
+                "https://docs.google.com/document/d/1GYABQfVz1nFjboOZOEKYi4Bhw6zoy2-d10Nisml6yJY/edit?usp=sharing"
               }
             />
           </Row>
@@ -128,12 +132,51 @@ export default function About() {
           <Row justify="center">
             <CardItemText
               header={"Process Writing #3"}
-              text={"Jpl Expository Essay"}
+              text={
+                "Analysis Essay - To showcase my analytical writing, I chose an essay that explored the theme of the novella, 'Metamorphosis.'"
+              }
               link={
-                "https://docs.google.com/document/d/1gj6_RZjaR3khltduAVC6shFBt5KcEvtp069LHFQNYqI/edit"
+                "https://docs.google.com/document/d/1iJMlqTwzXXy4_La7OkmccjlNXbaKGsyU55oasLwSQ5I/edit?usp=sharing"
               }
             />
           </Row>
+          <Spacer />
+          <Row justify="center">
+            <CardItemText
+              header={"Process Writing #4"}
+              text={
+                "Expository Essay - To showcase my expository writing, I chose an essay that explored JPL(Jet Propulsion Laboratory)."
+              }
+              link={
+                "https://docs.google.com/document/d/1MhQ30LySxbRR1QAhGPloqAzlIUWb7yG3z24Q0mJiX10/edit?usp=sharing"
+              }
+            />
+          </Row>
+          <Spacer />
+          <Row justify="center">
+            <CardItemText
+              header={"Process Writing #5"}
+              text={
+                "Formal Letter Writing - To showcase my letter writing, I chose a letter pertaining to my thoughts on the JPL invention challenge."
+              }
+              link={
+                "https://docs.google.com/document/d/1HQjK6zroOjMNgiULu6-hPS90aSfBbyaTjmjekAC5PG0/edit?usp=sharing"
+              }
+            />
+          </Row>
+          <Spacer />
+          <Row justify="center">
+            <CardItemText
+              header={"Process Writing #6"}
+              text={
+                "Creative Writing - To showcase my creative writing, I chose the first two short stories of a book I was thinking of writing."
+              }
+              link={
+                "https://docs.google.com/document/d/1yPxZBk71I2pnkIj4BtgThiA7BLBvbGlEQLwn2yf1E1g/edit?usp=sharing"
+              }
+            />
+          </Row>
+          <Spacer />
         </Container>
       </div>
       <Contact />
