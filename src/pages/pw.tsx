@@ -21,12 +21,10 @@ export default function About() {
     header,
     text,
     link,
-    cardheight,
   }: {
     header: string;
     text: string;
     link: string;
-    cardheight: string;
   }) => {
     return (
       <Card css={{ mw: "600px", h: "auto" }} variant="bordered">
@@ -34,7 +32,7 @@ export default function About() {
           <Text b>{header}</Text>
         </Card.Header>
         <Card.Divider />
-        <Card.Body css={{ height: "{cardheight}" }}>
+        <Card.Body>
           <Row justify="center">
             <Text>{text}</Text>
           </Row>
