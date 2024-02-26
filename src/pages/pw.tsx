@@ -181,7 +181,9 @@ export default function About() {
               text={
                 "Argumentative Writing - To showcase my argumentative writing, I chose an essay I wrote to show how AI is a net benefit to society."
               }
-              link={""}
+              link={
+                "https://docs.google.com/document/d/1Jbw2sS-KkWSBM5kDqTCPMtovQyDU1xgb51mLrYRA7UU/edit?usp=sharing"
+              }
             />
           </Row>
           <Spacer />

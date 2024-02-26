@@ -23,14 +23,12 @@ export default function About() {
     imgURL,
     url1,
     url2,
-    url3,
   }: {
     header: string;
     imgURL: string;
     text: string;
     url1: string;
     url2: string;
-    url3: string;
   }) => {
     return (
       <Card css={{ mw: "600px", h: "auto" }} variant="bordered">
@@ -56,8 +54,8 @@ export default function About() {
         <Card.Divider />
         <Card.Footer>
           <Row align="center">
-            <Spacer x={0.5} />
-            <Button auto css={{ width: "130px" }}>
+            <Spacer x={4} />
+            <Button>
               {" "}
               <Row justify="center">
                 <Link href={url1}>
@@ -75,14 +73,6 @@ export default function About() {
               </Row>
             </Button>
             <Spacer />
-            <Button>
-              {" "}
-              <Row justify="center">
-                <Link href={url3}>
-                  <Text color="black">Abstract</Text>
-                </Link>
-              </Row>
-            </Button>
           </Row>
         </Card.Footer>
       </Card>
