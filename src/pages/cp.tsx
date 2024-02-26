@@ -23,12 +23,14 @@ export default function About() {
     imgURL,
     url1,
     url2,
+    url3,
   }: {
     header: string;
     imgURL: string;
     text: string;
     url1: string;
     url2: string;
+    url3: string;
   }) => {
     return (
       <Card css={{ mw: "600px", h: "auto" }} variant="bordered">
@@ -54,8 +56,8 @@ export default function About() {
         <Card.Divider />
         <Card.Footer>
           <Row align="center">
-            <Spacer x={4} />
-            <Button>
+            <Spacer x={0.5} />
+            <Button auto css={{ width: "130px" }}>
               {" "}
               <Row justify="center">
                 <Link href={url1}>
@@ -69,6 +71,15 @@ export default function About() {
               <Row justify="center">
                 <Link href={url2}>
                   <Text color="black">Final Documentation</Text>
+                </Link>
+              </Row>
+            </Button>
+            <Spacer />
+            <Button>
+              {" "}
+              <Row justify="center">
+                <Link href={url3}>
+                  <Text color="black">Abstract</Text>
                 </Link>
               </Row>
             </Button>
@@ -211,6 +222,9 @@ export default function About() {
               url1={"https://www.youtube.com/watch?v=aWdJgH913PU"}
               url2={
                 "https://docs.google.com/document/d/18aijS_sescWfNT_c3vflO_yUaHFq9Fgh5N6pf2M0MOk/edit?usp=sharing"
+              }
+              url3={
+                "https://docs.google.com/presentation/d/1kCtGU3-rmh-0Yc1Sv4HBmlzWE3LO-EW2nLADQYsB1A4/edit?usp=sharing"
               }
             />
           </Row>

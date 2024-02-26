@@ -175,6 +175,16 @@ export default function About() {
             />
           </Row>
           <Spacer />
+          <Row justify="center">
+            <CardItemText
+              header={"Process Writing #7"}
+              text={
+                "Argumentative Writing - To showcase my argumentative writing, I chose an essay I wrote to show how AI is a net benefit to society."
+              }
+              link={""}
+            />
+          </Row>
+          <Spacer />
         </Container>
       </div>
       <Contact />

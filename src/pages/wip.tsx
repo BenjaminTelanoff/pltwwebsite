@@ -134,7 +134,13 @@ export default function About() {
         <Container>
           <Spacer y={2} />
           <Row justify="center">
-            <Text h3>I am not currently working on any projects.</Text>
+            <CardItemText
+              header={"Capstone Project"}
+              imgURL={"http://localhost:3000/wip"}
+              text={""}
+              url1={""}
+              url2={""}
+            />
           </Row>
         </Container>
       </div>
