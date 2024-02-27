@@ -213,9 +213,6 @@ export default function About() {
               url2={
                 "https://docs.google.com/document/d/18aijS_sescWfNT_c3vflO_yUaHFq9Fgh5N6pf2M0MOk/edit?usp=sharing"
               }
-              url3={
-                "https://docs.google.com/presentation/d/1kCtGU3-rmh-0Yc1Sv4HBmlzWE3LO-EW2nLADQYsB1A4/edit?usp=sharing"
-              }
             />
           </Row>
           <Spacer />
