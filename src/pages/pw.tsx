@@ -179,7 +179,7 @@ export default function About() {
             <CardItemText
               header={"Process Writing #7"}
               text={
-                "Argumentative Writing - To showcase my argumentative writing, I chose an essay I wrote to show how AI is a net benefit to society."
+                "Argumentative Writing - To showcase my argumentative writing, I chose an essay that explained how AI is a net benefit to society."
               }
               link={
                 "https://docs.google.com/document/d/1Jbw2sS-KkWSBM5kDqTCPMtovQyDU1xgb51mLrYRA7UU/edit?usp=sharing"
