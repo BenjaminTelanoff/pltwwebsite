@@ -82,10 +82,12 @@ export default function About() {
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Row justify="center">
-                    <Text h1>Welcome to my Process Writing</Text>
+                    <Text color="black" h1>
+                      Welcome to my Process Writing
+                    </Text>
                   </Row>
                   <Row justify="center" color="white">
-                    <Text h5>
+                    <Text color="black" h5>
                       Some writing pieces that I worked on this year!
                     </Text>
                   </Row>
@@ -183,6 +185,18 @@ export default function About() {
               }
               link={
                 "https://docs.google.com/document/d/1Jbw2sS-KkWSBM5kDqTCPMtovQyDU1xgb51mLrYRA7UU/edit?usp=sharing"
+              }
+            />
+          </Row>
+          <Spacer />
+          <Row justify="center">
+            <CardItemText
+              header={"Process Writing #8"}
+              text={
+                "This essay surrounded a court case that had an impact on the civil rights movement."
+              }
+              link={
+                "https://docs.google.com/document/d/1cHUxJejJPPYO7wnVP9rK4xpaG4tUtPOP1DjivJKSAVA/edit?usp=sharing"
               }
             />
           </Row>

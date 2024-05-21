@@ -215,6 +215,64 @@ export default function About() {
               }
             />
           </Row>
+          <Spacer y={2} />
+          <Row justify="center">
+            <Text h2>Capstone Project</Text>
+          </Row>
+          <Row justify="center">
+            <Card css={{ mw: "600px", h: "auto" }} variant="bordered">
+              <Card.Header css={{ height: "50px" }}>
+                <Text b>Project #1 - Final Capstone Project</Text>
+              </Card.Header>
+              <Card.Divider />
+              <Card.Body>
+                <Row justify="center">
+                  <Spacer y={1} />
+                  <Text>
+                    "Recently, California Governor Gavin Newsom passed a bill
+                    that aims to make California a 100% EV state by 2030.
+                    Currently, we do not have the infrastructure to charge that
+                    many vehicles. Our solution is straightforward- we want to
+                    help reduce the amount of charging stations the Californian
+                    government has to build by outsourcing private charging
+                    stations to the public via an app.
+                  </Text>
+                </Row>
+              </Card.Body>
+              <Card.Divider />
+              <Card.Footer>
+                <Row align="center">
+                  <Spacer x={1.7} />
+                  <Button auto>
+                    {" "}
+                    <Row justify="center">
+                      <Link href="https://docs.google.com/document/d/1R5Q8f5XEq8bM3Wqo5JJEbV1-IpEgBCyGAcogKkZ45tY/edit?usp=sharing">
+                        <Text color="black">Video</Text>
+                      </Link>
+                    </Row>
+                  </Button>
+                  <Spacer />
+                  <Button>
+                    {" "}
+                    <Row justify="center">
+                      <Link href="https://docs.google.com/document/d/1P8Y3zAC-_z67PM4EMe6LFAf-Qpe-EfAg8l11zB3elAk/edit?usp=sharing">
+                        <Text color="black">Final Documentation</Text>
+                      </Link>
+                    </Row>
+                  </Button>
+                  <Spacer />
+                  <Button>
+                    {" "}
+                    <Row justify="center">
+                      <Link href="https://docs.google.com/presentation/d/1FDrBDhkNx5bB6L5UB3eQSYYHhXYZtftG/edit?usp=sharing&ouid=103510680199160761525&rtpof=true&sd=true">
+                        <Text color="black">Final Poster</Text>
+                      </Link>
+                    </Row>
+                  </Button>
+                </Row>
+              </Card.Footer>
+            </Card>
+          </Row>
           <Spacer />
         </Container>
       </div>

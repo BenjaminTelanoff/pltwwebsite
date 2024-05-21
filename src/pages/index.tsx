@@ -34,11 +34,13 @@ export default function Home() {
             />
             <Spacer y={-1} />
             <Row justify="center">
-              <Text h1>Welcome to my PLTW website</Text>
+              <Text color="black" h1>
+                Welcome to my PLTW website
+              </Text>
             </Row>
             <Spacer y={-1} />
             <Row justify="center" align="center">
-              <Text size="$xl">
+              <Text size="$xl" color="black">
                 {
                   " My name is Benjamin Telanoff, and I am currently a senior at Santa Monica High School(SAMOHI). Having been an active participant in the PLTW program since my freshman year, I’m thrilled to continue this journey this year with the PLTW capstone program. This program is centered around providing technical solutions to real life problems. With this opportunity, I’m hoping to discover a transformative solution to a problem we encounter, that not only propels me and my peers towards revolutionary thinking, but also aligns with my aspiration to advance technology and enhance the quality of living for many."
                 }
